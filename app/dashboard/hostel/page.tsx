@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useRouter } from "next/navigation";
 import {
@@ -328,11 +328,11 @@ export default function HostelHubPage() {
                   onClick={() => setSelectedIssue(issue.id)}
                   style={{
                     display: "flex", flexDirection: "column", alignItems: "center", gap: 8,
-                    padding: "14px 8px", borderRadius: 12, cursor: "pointer", border: "none",
+                    padding: "14px 8px", borderRadius: 12, cursor: "pointer",
                     background: active ? "rgba(99,102,241,0.2)" : "rgba(255,255,255,0.04)",
                     border: `1px solid ${active ? "rgba(99,102,241,0.5)" : "rgba(255,255,255,0.08)"}`,
                     outline: "none", transition: "all 0.2s",
-                  } as any}
+                  } as React.CSSProperties}
                 >
                   <div style={{
                     width: 36, height: 36, borderRadius: 10,
